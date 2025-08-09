@@ -1,7 +1,5 @@
 export function initFiltering(elements) {
-    // @todo: #4.1 — заполнить выпадающие списки опциями
-
-    const updateIndexes = (indexes) => {
+    const updateIndexes = (elements, indexes) => {
         Object.keys(indexes).forEach((elementName) => {
             elements[elementName].append(...Object.values(indexes[elementName]).map(name => {
                 const el = document.createElement('option');
